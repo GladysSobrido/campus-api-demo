@@ -34,13 +34,30 @@ function App() {
     <>
       <h1>API Demo</h1>
       <button onClick={handleLoadMovies}>Load Movies</button>
-      {/* <button onClick={() => handleLoadMovie("tt0068646")}>
+      <button onClick={() => handleLoadMovie("tt0068646")}>
         Load Movie tt0068646
-      </button> */}
+      </button>
+      <h1>Here are the movies:</h1>
       <div className="flex-container">
         <ul className="flex-child">
           {movies.map((movie) => {
-            return <li key={movie.id}>{movie.title}</li>;
+            return (
+              <>
+                <ul key={movie.id}>
+                  <li
+                    onClick={() => handleLoadMovie(`${movie.id}`)}
+                    key={movie.id}
+                  >
+                    {movie.title}
+                  </li>
+                  <li>
+                    <button onClick={() => handleLoadMovie(`${movie.id}`)}>
+                      Load Movie: {movie.title}
+                    </button>
+                  </li>
+                </ul>
+              </>
+            );
           })}
         </ul>
         <div className="flex-child movie-details">
