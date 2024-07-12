@@ -1,0 +1,9 @@
+body {
+  background-color: bisque;
+  padding: 30px;
+}
+.info {
+  background-color: rgb(211, 114, 141);
+  padding: 30px;
+  margin-top: 20px;
+}

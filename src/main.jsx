@@ -4,7 +4,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import Books from "./componenten/Books.jsx";
 // import Effects from "./componenten/Effects.jsx";
-import Timer from "./componenten/Timer.jsx";
+// import Timer from "./componenten/Timer.jsx";
+import Exercise from "./componenten/Exercise.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
     {/* <Books /> */}
     {/* <Effects /> */}
-    <Timer />
+    {/* <Timer /> */}
+    <Exercise />
   </React.StrictMode>
 );
