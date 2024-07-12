@@ -8,10 +8,11 @@ import "./Effects.css";
 
 function Timer() {
   const [state, setState] = useState(0);
+  let message = "Status is running";
   //   const [author, setAuthor] = useState(undefined);
   const interval = setInterval(() => {
     setState(state + 10);
-  }, 1000);
+  }, 3000);
   {
     console.log("function Timer declared");
   }
@@ -30,7 +31,10 @@ function Timer() {
       //   const data = await response.json();
       //   console.log(data);
       //   setAuthor(data);
-      interval();
+      if (state < 100) {
+        interval();
+        message = "Status is running";
+      } else message = "State is 100%";
     }
     {
       console.log("Jetzt ist useEffect angerufen");
@@ -51,10 +55,11 @@ function Timer() {
 
   return (
     <>
-      <h1>Timer</h1>
       <div>
         <p>the counting is {state}</p>
+        <p>{message}</p>
       </div>
+      <h1>Timer</h1>
     </>
   );
 }
